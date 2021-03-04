@@ -3,15 +3,15 @@ Name:		fpart
 Version:	1.2.0
 Release:	1
 License:	BSD
-URL:		http://contribs.martymac.org
 Source0:	https://github.com/martymac/fpart/archive/%{name}-%{version}.tar.gz
 # Source0-md5:	4a2a71f1d92feebf935808fed6dc493b
+URL:		http://contribs.martymac.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gcc
 Suggests:	cpio
 Suggests:	rsync
 Suggests:	sudo
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Fpart is a tool that helps you sort file trees and pack them into bags
@@ -33,7 +33,6 @@ autoreconf --install
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
