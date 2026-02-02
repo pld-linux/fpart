@@ -1,10 +1,10 @@
 Summary:	a tool that sorts files and packs them into bags
 Name:		fpart
-Version:	1.2.0
+Version:	1.7.0
 Release:	1
 License:	BSD
 Source0:	https://github.com/martymac/fpart/archive/%{name}-%{version}.tar.gz
-# Source0-md5:	4a2a71f1d92feebf935808fed6dc493b
+# Source0-md5:	b431dcd889fb59b57d64db55b9daad39
 URL:		http://contribs.martymac.org/
 BuildRequires:	autoconf >= 2.63
 BuildRequires:	automake
@@ -43,7 +43,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc COPYING Changelog README TODO
+%doc COPYING Changelog.md README.md TODO
 %attr(755,root,root) %{_bindir}/fpart
 %attr(755,root,root) %{_bindir}/fpsync
 %{_mandir}/man1/fpart.1*
