@@ -6,7 +6,7 @@ License:	BSD
 Source0:	https://github.com/martymac/fpart/archive/%{name}-%{version}.tar.gz
 # Source0-md5:	4a2a71f1d92feebf935808fed6dc493b
 URL:		http://contribs.martymac.org/
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.63
 BuildRequires:	automake
 Suggests:	cpio
 Suggests:	rsync
@@ -27,7 +27,9 @@ files or a limited size.
 %setup -q -n %{name}-%{name}-%{version}
 
 %build
-autoreconf --install
+%{__aclocal}
+%{__autoconf}
+%{__automake}
 %configure
 %{__make}
 
