@@ -41,7 +41,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Changelog README TODO
+%doc COPYING Changelog README TODO
 %attr(755,root,root) %{_bindir}/fpart
 %attr(755,root,root) %{_bindir}/fpsync
 %{_mandir}/man1/fpart.1*
